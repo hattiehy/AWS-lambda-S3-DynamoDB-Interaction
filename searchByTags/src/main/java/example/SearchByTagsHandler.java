@@ -54,7 +54,7 @@ public class SearchByTagsHandler implements RequestHandler<TagRequest, Object> {
         for (TagRecord tagRecord : records) {
             if (tagRecord.getTags().containsAll(tags)) {
                 Map<String, String> imageAddress = new HashMap<>();
-                imageAddress.put("object_id", tagRecord.getObjectId());
+                imageAddress.put("objectId", tagRecord.getObjectId());
                 imageAddress.put("url", tagRecord.getUrl());
                 tagRepose.getUrlList().add(imageAddress);
             }

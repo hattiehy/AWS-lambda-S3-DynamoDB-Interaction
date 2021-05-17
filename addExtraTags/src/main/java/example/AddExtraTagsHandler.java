@@ -45,7 +45,7 @@ public class AddExtraTagsHandler implements RequestHandler<AddTagRequest, Object
         eav.put(":val2", new AttributeValue().withS(objectId));
 
         DynamoDBQueryExpression<TagRecord> queryExpression = new DynamoDBQueryExpression<TagRecord>()
-                .withKeyConditionExpression("uid = :val1 and s3_id = :val2").withExpressionAttributeValues(eav);
+                .withKeyConditionExpression("uid = :val1 and objectId = :val2").withExpressionAttributeValues(eav);
 
         List<TagRecord> records = mapper.query(TagRecord.class, queryExpression);
         logger.info("Query result:" + gson.toJson(records));
@@ -55,6 +55,7 @@ public class AddExtraTagsHandler implements RequestHandler<AddTagRequest, Object
         Set<String> oldTags = tagRecord.getTags();
         oldTags.addAll(tags);
         tagRecord.setTags(oldTags);
+        mapper.save(tagRecord);
 
         return tagRecord;
     }

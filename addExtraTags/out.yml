@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://lambda-artifacts-8d66a42c9638c84b/8d3baf348a3a731f01a00e5491cbdaaa
+      CodeUri: s3://lambda-artifacts-8d66a42c9638c84b/1651c0cdf02efedae4073b7777ea2b57
       Handler: example.AddExtraTagsHandler::handleRequest
       Runtime: java8
       Description: Java function
