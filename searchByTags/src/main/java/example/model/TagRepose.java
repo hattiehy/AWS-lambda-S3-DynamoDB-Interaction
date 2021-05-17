@@ -6,16 +6,16 @@ import java.util.List;
 
 public class TagRepose {
 
-    private List<Map<String, String>> urlList = new ArrayList<>();
+    private List<TagRecord> objects = new ArrayList<>();
 
     public TagRepose() {
     }
 
-    public List<Map<String, String>> getUrlList() {
-        return urlList;
+    public List<TagRecord> getObjects() {
+        return objects;
     }
 
-    public void setUrlList(List<Map<String, String>> urlList) {
-        this.urlList = urlList;
+    public void setObjects(List<TagRecord> objects) {
+        this.objects = objects;
     }
 }
