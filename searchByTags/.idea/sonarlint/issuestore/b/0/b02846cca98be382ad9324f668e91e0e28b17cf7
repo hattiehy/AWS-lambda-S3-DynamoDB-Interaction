@@ -1,0 +1,12 @@
+
+w
+java:S2629'"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(‰‰§Ìÿÿÿÿÿ
+r
+java:S26292"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(İÔçÆ
+|
+java:S1128
+"fRemove this unused import 'com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent'.(¸çñ
+\
+java:S3457'"AFormat specifiers should be used instead of string concatenation.(‰‰§Ìÿÿÿÿÿ
+W
+java:S34572"AFormat specifiers should be used instead of string concatenation.(İÔçÆ
