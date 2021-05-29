@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import json
 
+
 from boto3.dynamodb.conditions import Key
 
 logger = logging.getLogger()
@@ -84,7 +85,6 @@ def query_object(uid, dynamodb=None):
     )
     return response['Items']
 
-
 def process_encode_image(encode_image):
     header, data = encode_image.split(',', 1)
     img = base64.b64decode(data)
@@ -95,12 +95,12 @@ def process_encode_image(encode_image):
 
 
 def lambda_handler(event, context):
-    # logger.info(event)
+    #logger.info(event)
     request = eval(event['body'])
     logger.info(request)
     uid = request['uid']
     encode_image = request['image']
-    # logger.info('UID: ' + uid)
+    #logger.info('UID: ' + uid)
     img_np = process_encode_image(encode_image)
     tags = do_prediction(img_np, net, label_lst)
     logger.info('TAGS: ' + str(tags))
@@ -108,15 +108,25 @@ def lambda_handler(event, context):
 
     resp_lst = []
     for ob in object_lst:
-        if set(tags) < set(ob['tags']):
+        if len(set(tags)) == 0:
+            response = {
+                "statusCode": 200,
+                "headers": {},
+                "body": json.dumps({
+                "objects": []
+                })
+            }
+        elif set(tags) < set(ob['tags']):
             ob['tags'] = list(ob['tags'])
             resp_lst.append(ob)
 
     response = {
-        "statusCode": 200,
-        "headers": {},
-        "body": json.dumps({
-            "objects": resp_lst
-        })
-    }
+                "statusCode": 200,
+                "headers": {},
+                "body": json.dumps({
+                "objects": resp_lst
+                })
+            }
+
+
     return response

@@ -1,0 +1,20 @@
+
+w
+java:S2629-"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(‰‰§Ìÿÿÿÿÿ
+T
+java:S26291"7Use the built-in formatting to construct this argument.(£öÜ…8¥‘ƒ“›/
+n
+java:S1128"LRemove this unused import 'com.amazonaws.services.dynamodbv2.document.Item'.(Ïù‚ºúÿÿÿÿ8½å„“›/
+z
+java:S1128"XRemove this unused import 'com.amazonaws.services.dynamodbv2.document.spec.GetItemSpec'.(Þ¹ÀÓüÿÿÿÿ8½å„“›/
+k	java:S116("VRename this field "bucket_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Š³›
+V	java:S125&"<This block of commented-out lines of code should be removed.(êÕéÅúÿÿÿÿ
+\
+java:S3457-"AFormat specifiers should be used instead of string concatenation.(‰‰§Ìÿÿÿÿÿ
+^
+java:S34571"AFormat specifiers should be used instead of string concatenation.(£öÜ…8Ó‘ƒ“›/
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(­âÏä
+Z	java:S106A"9Replace this use of System.out or System.err by a logger.(– âçùÿÿÿÿ8ï³…“›/
+U	java:S106C"9Replace this use of System.out or System.err by a logger.(°íÔ³8ð³…“›/
+Z	java:S106F"9Replace this use of System.out or System.err by a logger.(àÆáÎùÿÿÿÿ8ñ³…“›/
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ8ñ³…“›/
