@@ -11,3 +11,13 @@ g
 7addExtraTags/src/main/java/example/model/TagRecord.java,7/8/78beebde3dfcfa282c5413aafdf5009ed7b8afd3
 k
 ;addExtraTags/src/main/java/example/model/AddTagRequest.java,d/4/d4bdd10716e3d1e1276c0ce8b3efd10e67c4f9ad
+L
+addExtraTags/bucket-name.txt,9/9/9979c46d5fcd22485d2f1391d73d86103b393578
+L
+searchByTags/bucket-name.txt,5/8/588e295dbcc643bf73560186c4daef0b12edecca
+D
+addExtraTags/out.yml,4/9/497dea3b3de6c9bf3ee026815ab283d4c79c7239
+D
+searchByTags/out.yml,e/4/e48e361fd7dc45d0de90f438364653794cbde6c8
+P
+ searchByImage/lambda_function.py,b/f/bf77fb668691cf1f37c8eacddd48d3af8877c240

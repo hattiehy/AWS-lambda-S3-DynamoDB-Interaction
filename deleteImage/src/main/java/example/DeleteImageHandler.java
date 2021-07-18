@@ -15,7 +15,7 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import example.model.DeleteRequest;
+import example.model.DeleteObjectRequest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,7 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class DeleteImageHandler implements RequestHandler<DeleteRequest, String> {
+public class DeleteImageHandler implements RequestHandler<DeleteObjectRequest, String> {
 
     private static final Logger logger = LoggerFactory.getLogger(DeleteImageHandler.class);
     Gson gson = new GsonBuilder().create();
@@ -37,10 +37,10 @@ public class DeleteImageHandler implements RequestHandler<DeleteRequest, String>
     // build s3
     //Region region = Region.US_EAST_1;
     final AmazonS3 s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
-    String bucket_name = "fit5225tests3";
+    String bucket_name = "assignimagestore";
 
     @Override
-    public String handleRequest(DeleteRequest event, Context context) {
+    public String handleRequest(DeleteObjectRequest event, Context context) {
         logger.info("DeleteImageHandler receive request");
         logger.info("Event body:" + gson.toJson(event));
         String uid = event.getUid();
@@ -49,9 +49,11 @@ public class DeleteImageHandler implements RequestHandler<DeleteRequest, String>
         logger.info("objectId:" + objectId);
         // delete the item in s3
         try {
+            logger.info("Attempting a s3 delete...");
             s3.deleteObject(bucket_name, objectId);
+            logger.info("DeleteItem succeeded");
         } catch (AmazonServiceException e) {
-            System.err.println(e.getErrorMessage());
+            logger.error(e.getErrorMessage());
             System.exit(1);
         }
 
@@ -62,13 +64,13 @@ public class DeleteImageHandler implements RequestHandler<DeleteRequest, String>
                 .withPrimaryKey(new PrimaryKey("uid", uid, "objectId", objectId));
 
         try {
-            System.out.println("Attempting a delete...");
+            logger.info("Attempting a db delete...");
             table.deleteItem(deleteItemSpec);
-            System.out.println("DeleteItem succeeded");
+            logger.info("DeleteItem succeeded");
         }
         catch (Exception e) {
-            System.err.println("Unable to delete item: " + uid + " " + objectId);
-            System.err.println(e.getMessage());
+            logger.error("Unable to delete item: " + uid + " " + objectId);
+            logger.error(e.getMessage());
         }
 
         return "Delete Success";

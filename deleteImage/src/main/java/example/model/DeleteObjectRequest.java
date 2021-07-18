@@ -2,7 +2,7 @@ package example.model;
 
 import java.util.List;
 
-public class DeleteRequest {
+public class DeleteObjectRequest {
 
     private String uid;
     private String objectId;

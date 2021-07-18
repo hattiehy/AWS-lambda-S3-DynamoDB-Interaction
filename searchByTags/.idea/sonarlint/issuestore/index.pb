@@ -131,28 +131,20 @@ x
 H.idea/libraries/Maven__software_amazon_eventstream_eventstream_1_0_1.xml,d/8/d8fbb6ef3d071d7f17cf7690d407a14ebf216271
 m
 =.idea/libraries/Maven__software_amazon_ion_ion_java_1_0_2.xml,9/5/9543728562a75337aaa5b780549be06fa9c49f29
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 _
 /src/test/java/example/SQSEventDeserializer.java,a/6/a68e25d2eeaeb3e6e3a6b3b253d7e2a1510d17e9
-[
-+src/main/java/example/model/TagRequest.java,8/4/84f25165870ef579be7fbcd6bb68ae3c9bda4480
 V
 &src/test/java/example/TestContext.java,7/9/790d7e42c028e80c37be74d611d1784f45af73a6
 U
 %src/test/java/example/TestLogger.java,b/5/b526d5d40e0eee03adb1711003506c6f605bef1a
-Z
-*src/main/java/example/model/TagRecord.java,3/0/307f5e6e57ec289857b0fdcf22833b05ec6f5216
 >
 blank-java.iml,3/5/35d5ebe6fb04bd530040b62f6d9d6bfa74790363
-7
-out.yml,f/e/feef33f55314781911ca9db1a0729c6c04127a2d
 <
 template.yml,8/1/819c91fe9ef2286228daa192ef9a65ce74bf3ef0
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-Z
-*src/main/java/example/model/TagRepose.java,1/3/13ee498c7e30ad850a719de6e2fe1b907173299a
+;
+3-deploy.sh,b/b/bbfebd1544bb369cccadbd5030148e9eebad41fb
 B
 1-create-bucket.sh,7/4/744b412e3b6619ee300904df84b2e5561e04dd80
 @
@@ -161,9 +153,3 @@ B
 5-cleanup.sh,6/f/6f4d615d37d168edac5a61172986db2a837a4b30
 ;
 4-invoke.sh,9/a/9a1b691142292ec39c107af776efa531ca4cd2e8
-;
-3-deploy.sh,b/b/bbfebd1544bb369cccadbd5030148e9eebad41fb
-^
-.src/main/java/example/SearchByTagsHandler.java,b/0/b02846cca98be382ad9324f668e91e0e28b17cf7
-?
-bucket-name.txt,0/0/00154cf06b23baf931d6453c63d706aadc2cb4d5

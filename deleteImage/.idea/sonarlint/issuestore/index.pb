@@ -1,29 +1,11 @@
 
-s
-C.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kms_1_11_1018.xml,3/9/3903ba35af5ab01785aafbd1dfd99c6381951282
-r
-B.idea/libraries/Maven__com_amazonaws_aws_java_sdk_s3_1_11_1018.xml,5/a/5a222f2db6a38aa9a97245e15f3e439d965ea034
-[
-+src/main/java/example/model/TagRequest.java,8/4/84f25165870ef579be7fbcd6bb68ae3c9bda4480
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-B
-1-create-bucket.sh,7/4/744b412e3b6619ee300904df84b2e5561e04dd80
 @
 2-build-layer.sh,b/b/bb1645928519d6e9eac5fb2f323f2b1e42aa2d32
-;
-3-deploy.sh,b/b/bbfebd1544bb369cccadbd5030148e9eebad41fb
-;
-4-invoke.sh,9/a/9a1b691142292ec39c107af776efa531ca4cd2e8
-<
-5-cleanup.sh,6/f/6f4d615d37d168edac5a61172986db2a837a4b30
 >
 blank-java.iml,3/5/35d5ebe6fb04bd530040b62f6d9d6bfa74790363
-?
-bucket-name.txt,0/0/00154cf06b23baf931d6453c63d706aadc2cb4d5
-^
-.src/main/java/example/model/DeleteRequest.java,0/0/00c64a2f21e9d3310b249228acaf78dbb2232455
 :
 
 event.json,3/1/315ffd2012d4019d9ae509d36ea6ee93cef83480
@@ -161,11 +143,23 @@ _
 /src/test/java/example/SQSEventDeserializer.java,a/6/a68e25d2eeaeb3e6e3a6b3b253d7e2a1510d17e9
 <
 template.yml,8/1/819c91fe9ef2286228daa192ef9a65ce74bf3ef0
-@
-template-mvn.yml,8/c/8c5b0aadd875720f3a98d174442bed616dcfa248
 V
 &src/test/java/example/TestContext.java,7/9/790d7e42c028e80c37be74d611d1784f45af73a6
 U
 %src/test/java/example/TestLogger.java,b/5/b526d5d40e0eee03adb1711003506c6f605bef1a
+B
+1-create-bucket.sh,7/4/744b412e3b6619ee300904df84b2e5561e04dd80
+@
+template-mvn.yml,8/c/8c5b0aadd875720f3a98d174442bed616dcfa248
+<
+5-cleanup.sh,6/f/6f4d615d37d168edac5a61172986db2a837a4b30
+;
+4-invoke.sh,9/a/9a1b691142292ec39c107af776efa531ca4cd2e8
+;
+3-deploy.sh,b/b/bbfebd1544bb369cccadbd5030148e9eebad41fb
+?
+bucket-name.txt,0/0/00154cf06b23baf931d6453c63d706aadc2cb4d5
+d
+4src/main/java/example/model/DeleteObjectRequest.java,5/a/5ad4e7a9d9953ec69b8d2e2193435524fb29c900
 ]
 -src/main/java/example/DeleteImageHandler.java,5/4/54a611577f8d8ceafc3603076db5d801148636a1

@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://lambda-artifacts-eb1da939a6014ac0/33495f30814c7fe24441d837a75c266a
+      CodeUri: s3://lambda-artifacts-bd2aa1c152cc7e30/08413cd728532ba92afa8518c137f679
       Handler: example.DeleteImageHandler::handleRequest
       Runtime: java8
       Description: Java function

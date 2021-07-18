@@ -18,6 +18,7 @@ package example.model;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.io.Serializable;
+import java.net.URL;
 import java.util.Set;
 
 
@@ -30,8 +31,7 @@ public class TagRecord implements Serializable {
     @DynamoDBRangeKey
     private String objectId;
 
-    @DynamoDBAttribute
-    private String url;
+    private URL url;
 
     @DynamoDBAttribute
     private Set<String> tags;
@@ -53,11 +53,11 @@ public class TagRecord implements Serializable {
         this.objectId = objectId;
     }
 
-    public String getUrl() {
+    public URL getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(URL url) {
         this.url = url;
     }
 
